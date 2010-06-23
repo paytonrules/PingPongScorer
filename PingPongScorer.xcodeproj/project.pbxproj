@@ -10,6 +10,7 @@
 		07010EAE1050520B004D288F /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07010EAA1050520B004D288F /* GTMIPhoneUnitTestDelegate.m */; };
 		07010EAF1050520B004D288F /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07010EAB1050520B004D288F /* GTMIPhoneUnitTestMain.m */; };
 		07010EB01050520B004D288F /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07010EAD1050520B004D288F /* GTMSenTestCase.m */; };
+		072261A811D08CC90064F93E /* PingPongScorerViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */; };
 		0777BF1810486AC400D93E1A /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
 		0777BF1910486AC400D93E1A /* PingPongScorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PingPongScorerViewController.m */; };
 		1D3623260D0F684500981E51 /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
@@ -40,6 +41,8 @@
 		07010EAC1050520B004D288F /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "Google Toolbox/GTMSenTestCase.h"; sourceTree = "<group>"; };
 		07010EAD1050520B004D288F /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "Google Toolbox/GTMSenTestCase.m"; sourceTree = "<group>"; };
 		0722618811D089090064F93E /* PingPongScorer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingPongScorer_Prefix.pch; sourceTree = "<group>"; };
+		072261A611D08CC90064F93E /* PingPongScorerViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingPongScorerViewControllerTest.h; sourceTree = "<group>"; };
+		072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingPongScorerViewControllerTest.m; sourceTree = "<group>"; };
 		079FD52610504F2E0079DFFA /* PingPongScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPongScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079FD52810504F2E0079DFFA /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DAA4CE1048188B00E97CF5 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 		0724D86A104965F200A9215C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				072261A611D08CC90064F93E /* PingPongScorerViewControllerTest.h */,
+				072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				07010EAE1050520B004D288F /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				07010EAF1050520B004D288F /* GTMIPhoneUnitTestMain.m in Sources */,
 				07010EB01050520B004D288F /* GTMSenTestCase.m in Sources */,
+				072261A811D08CC90064F93E /* PingPongScorerViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

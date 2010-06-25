@@ -2,14 +2,14 @@
 
 @interface PingPongScorerViewController : UIViewController 
 {
-	UILabel *playerOneScore;
-	UILabel *playerTwoScore;
+	UIButton *playerOneScore;
+	UIButton *playerTwoScore;
 }
 
 -(void) scorePlayerOnePoint:(id) sender;
 -(void) scorePlayerTwoPoint:(id) sender;
-@property(nonatomic, retain) UILabel *playerOneScore;
-@property(nonatomic, retain) UILabel *playerTwoScore;
+@property(nonatomic, retain) UIButton *playerOneScore;
+@property(nonatomic, retain) UIButton *playerTwoScore;
 
 @end
 

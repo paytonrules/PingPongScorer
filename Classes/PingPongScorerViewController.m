@@ -4,15 +4,15 @@
 @synthesize playerOneScore, playerTwoScore;
 
 -(void) scorePlayerOnePoint:(id) sender
-{	
-	int newValue = [playerOneScore.text intValue] + 1;
-	playerOneScore.text = [NSString stringWithFormat:@"%d", newValue];
+{
+  int newValue = [playerOneScore.titleLabel.text intValue] + 1;
+  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", newValue];
 }
 
 -(void) scorePlayerTwoPoint:(id) sender
 {
-	int newValue = [playerTwoScore.text intValue] + 1;
-	playerTwoScore.text = [NSString stringWithFormat:@"%d", newValue];
+	int newValue = [playerTwoScore.titleLabel.text intValue] + 1;
+	playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", newValue];
 }
 
 /*

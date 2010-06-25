@@ -405,9 +405,40 @@ static int MethodSort(const void *a, const void *b) {
 // Don't want to get leaks on the iPhone Device as the device doesn't
 // have 'leaks'. The simulator does though.
 
+// We will need the system version but can't use any built in Cocoa functionality since this is
+// an iPhone app, so instead we get that information from the system with a system command.
+#define TEMP_FILE @"version.txt"
+
+static float _GetSystemVersion(void) {
+  float returnedVersion = 0.0f;
+
+  NSString *getSystemVersionCommand
+    = [NSString stringWithString: @"sw_vers | grep ProductVersion | awk '{print $2}' > version.txt"];
+
+  if (system([getSystemVersionCommand UTF8String])) {
+    NSLog(@"Could not determine the system version for using leaks - assuming pre-snow leopard");
+  }
+  else {
+    NSString *version = [NSString stringWithContentsOfFile:TEMP_FILE
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:nil];
+
+    NSString *majorVersion = [version substringToIndex:4];
+    returnedVersion = [majorVersion floatValue];
+  }
+
+  [[NSFileManager defaultManager] removeItemAtPath:TEMP_FILE
+                                             error:nil];
+
+  return returnedVersion;
+}
+
+
 // COV_NF_START
 // We don't have leak checking on by default, so this won't be hit.
 static void _GTMRunLeaks(void) {
+  const float SNOW_LEOPARD = 10.6;
+
   // This is an atexit handler. It runs leaks for us to check if we are
   // leaking anything in our tests.
   const char* cExclusionsEnv = getenv("GTM_LEAKS_SYMBOLS_TO_IGNORE");
@@ -422,11 +453,21 @@ static void _GTMRunLeaks(void) {
       [exclusions appendFormat:@"-exclude \"%@\" ", exclusion];
     }
   }
-  NSString *string
+
+  NSString *leaksCommand
     = [NSString stringWithFormat:@"/usr/bin/leaks %@%d"
        @"| /usr/bin/sed -e 's/Leak: /Leaks:0: warning: Leak /'",
        exclusions, getpid()];
-  int ret = system([string UTF8String]);
+
+  // Snow Leopard and up require an additional environment variable to be set
+  // in order for the leaks command to work.
+  if (_GetSystemVersion() >= SNOW_LEOPARD)
+  {
+    NSString* snowLeopardEnvironmentVariable = [NSString stringWithString:@"export DYLD_ROOT_PATH=;"];
+    leaksCommand = [snowLeopardEnvironmentVariable stringByAppendingString:leaksCommand];
+  }
+
+  int ret = system([leaksCommand UTF8String]);
   if (ret) {
     fprintf(stderr, "%s:%d: Error: Unable to run leaks. 'system' returned: %d",
             __FILE__, __LINE__, ret);

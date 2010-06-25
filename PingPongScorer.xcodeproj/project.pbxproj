@@ -264,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Google\\ Toolbox/RunIPhoneUnitTest.sh";
+			shellScript = "export GTM_ENABLE_LEAKS=1\n./Google\\ Toolbox/RunIPhoneUnitTest.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 

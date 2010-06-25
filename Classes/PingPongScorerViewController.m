@@ -1,13 +1,20 @@
 #import "PingPongScorerViewController.h"
 
 @implementation PingPongScorerViewController
-@synthesize playerOneScore;
+@synthesize playerOneScore, playerTwoScore;
 
 -(void) scorePlayerOnePoint:(id) sender
 {	
 	int newValue = [playerOneScore.text intValue] + 1;
 	playerOneScore.text = [NSString stringWithFormat:@"%d", newValue];
 }
+
+-(void) scorePlayerTwoPoint:(id) sender
+{
+	int newValue = [playerTwoScore.text intValue] + 1;
+	playerTwoScore.text = [NSString stringWithFormat:@"%d", newValue];
+}
+
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

@@ -13,6 +13,7 @@
 		072261A811D08CC90064F93E /* PingPongScorerViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */; };
 		0766B2C011D21B56004443B6 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B2BD11D21B56004443B6 /* GTMObjC2Runtime.m */; };
 		0766B2C111D21B56004443B6 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B2BF11D21B56004443B6 /* GTMRegex.m */; };
+		0766B56111D55805004443B6 /* MockPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B56011D55805004443B6 /* MockPlayer.m */; };
 		0777BF1810486AC400D93E1A /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
 		0777BF1910486AC400D93E1A /* PingPongScorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PingPongScorerViewController.m */; };
 		1D3623260D0F684500981E51 /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
@@ -49,6 +50,9 @@
 		0766B2BD11D21B56004443B6 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = "Google Toolbox/GTMObjC2Runtime.m"; sourceTree = "<group>"; };
 		0766B2BE11D21B56004443B6 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "Google Toolbox/GTMRegex.h"; sourceTree = "<group>"; };
 		0766B2BF11D21B56004443B6 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "Google Toolbox/GTMRegex.m"; sourceTree = "<group>"; };
+		0766B54F11D555F8004443B6 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Protocols/Player.h; sourceTree = "<group>"; };
+		0766B55F11D55805004443B6 /* MockPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPlayer.h; sourceTree = "<group>"; };
+		0766B56011D55805004443B6 /* MockPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPlayer.m; sourceTree = "<group>"; };
 		079FD52610504F2E0079DFFA /* PingPongScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPongScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079FD52810504F2E0079DFFA /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DAA4CE1048188B00E97CF5 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -89,10 +93,20 @@
 		0724D86A104965F200A9215C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0766B56011D55805004443B6 /* MockPlayer.m */,
+				0766B55F11D55805004443B6 /* MockPlayer.h */,
 				072261A611D08CC90064F93E /* PingPongScorerViewControllerTest.h */,
 				072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		0766B55211D5560F004443B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0766B54F11D555F8004443B6 /* Player.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		0777BF0910486A2200D93E1A /* Google Toolbox */ = {
@@ -135,6 +149,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0766B55211D5560F004443B6 /* Protocols */,
 				0724D86A104965F200A9215C /* Tests */,
 				0777BF0910486A2200D93E1A /* Google Toolbox */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -281,6 +296,7 @@
 				072261A811D08CC90064F93E /* PingPongScorerViewControllerTest.m in Sources */,
 				0766B2C011D21B56004443B6 /* GTMObjC2Runtime.m in Sources */,
 				0766B2C111D21B56004443B6 /* GTMRegex.m in Sources */,
+				0766B56111D55805004443B6 /* MockPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

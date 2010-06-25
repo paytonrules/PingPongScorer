@@ -1,4 +1,5 @@
 #import "PingPongScorerViewControllerTest.h"
+#import "MockPlayer.h"
 
 @implementation PingPongScorerViewControllerTest
 
@@ -35,6 +36,16 @@
 	[controller scorePlayerTwoPoint:nil];
 	
 	STAssertEqualStrings(controller.playerTwoScore.titleLabel.text, @"2", nil);
+}
+
+-(void) testPlayerOneIsScored
+{
+  MockPlayer *player = [[[MockPlayer alloc] init] autorelease];
+  controller.playerOne = player;
+  
+  [controller scorePlayerOnePoint:nil];
+  
+  STAssertTrue(player.scored, @"Player should have scored, but didn't.");
 }
   
   

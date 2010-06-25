@@ -14,6 +14,9 @@
 		0766B2C011D21B56004443B6 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B2BD11D21B56004443B6 /* GTMObjC2Runtime.m */; };
 		0766B2C111D21B56004443B6 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B2BF11D21B56004443B6 /* GTMRegex.m */; };
 		0766B56111D55805004443B6 /* MockPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B56011D55805004443B6 /* MockPlayer.m */; };
+		0766B59A11D56FD6004443B6 /* CurrentPlayerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B59911D56FD6004443B6 /* CurrentPlayerTest.m */; };
+		0766B5B111D573CD004443B6 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B5B011D573CD004443B6 /* CurrentPlayer.m */; };
+		0766B5B211D573CD004443B6 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766B5B011D573CD004443B6 /* CurrentPlayer.m */; };
 		0777BF1810486AC400D93E1A /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
 		0777BF1910486AC400D93E1A /* PingPongScorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PingPongScorerViewController.m */; };
 		1D3623260D0F684500981E51 /* PingPongScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */; };
@@ -53,6 +56,10 @@
 		0766B54F11D555F8004443B6 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Protocols/Player.h; sourceTree = "<group>"; };
 		0766B55F11D55805004443B6 /* MockPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPlayer.h; sourceTree = "<group>"; };
 		0766B56011D55805004443B6 /* MockPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPlayer.m; sourceTree = "<group>"; };
+		0766B59811D56FD6004443B6 /* CurrentPlayerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayerTest.h; sourceTree = "<group>"; };
+		0766B59911D56FD6004443B6 /* CurrentPlayerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayerTest.m; sourceTree = "<group>"; };
+		0766B5AF11D573CD004443B6 /* CurrentPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayer.h; sourceTree = "<group>"; };
+		0766B5B011D573CD004443B6 /* CurrentPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayer.m; sourceTree = "<group>"; };
 		079FD52610504F2E0079DFFA /* PingPongScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPongScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079FD52810504F2E0079DFFA /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DAA4CE1048188B00E97CF5 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -97,6 +104,8 @@
 				0766B55F11D55805004443B6 /* MockPlayer.h */,
 				072261A611D08CC90064F93E /* PingPongScorerViewControllerTest.h */,
 				072261A711D08CC90064F93E /* PingPongScorerViewControllerTest.m */,
+				0766B59811D56FD6004443B6 /* CurrentPlayerTest.h */,
+				0766B59911D56FD6004443B6 /* CurrentPlayerTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -133,6 +142,8 @@
 				1D3623250D0F684500981E51 /* PingPongScorerAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* PingPongScorerViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* PingPongScorerViewController.m */,
+				0766B5AF11D573CD004443B6 /* CurrentPlayer.h */,
+				0766B5B011D573CD004443B6 /* CurrentPlayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -297,6 +308,8 @@
 				0766B2C011D21B56004443B6 /* GTMObjC2Runtime.m in Sources */,
 				0766B2C111D21B56004443B6 /* GTMRegex.m in Sources */,
 				0766B56111D55805004443B6 /* MockPlayer.m in Sources */,
+				0766B59A11D56FD6004443B6 /* CurrentPlayerTest.m in Sources */,
+				0766B5B111D573CD004443B6 /* CurrentPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +320,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* PingPongScorerAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* PingPongScorerViewController.m in Sources */,
+				0766B5B211D573CD004443B6 /* CurrentPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

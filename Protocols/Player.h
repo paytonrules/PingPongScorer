@@ -3,5 +3,6 @@
 @protocol Player
 
 -(void) score;
+@property int currentScore;
 
 @end

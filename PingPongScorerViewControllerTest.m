@@ -9,7 +9,7 @@
 
 -(void) tearDown
 {
-	//[controller release];
+	[controller release];
 }
 
 -(void) testScorePlayerOnePointUpdatesPlayerOneText

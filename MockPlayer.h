@@ -3,6 +3,7 @@
 
 @interface MockPlayer : NSObject<Player> {
   BOOL scored;
+  int currentScore;
 }
 
 @property BOOL scored;

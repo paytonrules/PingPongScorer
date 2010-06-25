@@ -3,6 +3,6 @@
 @protocol Player
 
 -(void) score;
-@property int currentScore;
+@property(readonly) int currentScore;
 
 @end

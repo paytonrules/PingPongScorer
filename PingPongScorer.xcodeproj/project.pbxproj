@@ -197,9 +197,9 @@
 			productReference = 079FD52810504F2E0079DFFA /* UnitTests.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D6058900D05DD3D006BFB54 /* MyCurrentLocation */ = {
+		1D6058900D05DD3D006BFB54 /* PingPongScorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MyCurrentLocation" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PingPongScorer" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -210,7 +210,7 @@
 			dependencies = (
 				0724D8A91049692B00A9215C /* PBXTargetDependency */,
 			);
-			name = MyCurrentLocation;
+			name = PingPongScorer;
 			productName = MyCurrentLocation;
 			productReference = 079FD52610504F2E0079DFFA /* PingPongScorer.app */;
 			productType = "com.apple.product-type.application";
@@ -227,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* MyCurrentLocation */,
+				1D6058900D05DD3D006BFB54 /* PingPongScorer */,
 				07DAA4CB1048188B00E97CF5 /* UnitTests */,
 			);
 		};
@@ -326,7 +326,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = UnitTests;
-				SDKROOT = iphoneos2.1;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Debug;
 		};
@@ -351,7 +351,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = UnitTests;
-				SDKROOT = iphoneos2.1;
+				SDKROOT = iphonesimulator3.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MyCurrentLocation" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PingPongScorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

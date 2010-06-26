@@ -8,5 +8,6 @@
 
 @property BOOL scored;
 -(void) score;
+-(void) setCurrentScore:(int)newScore;
 
 @end

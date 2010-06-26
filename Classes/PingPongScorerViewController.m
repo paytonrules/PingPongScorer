@@ -1,19 +1,18 @@
 #import "PingPongScorerViewController.h"
 
 @implementation PingPongScorerViewController
-@synthesize playerOneScore, playerTwoScore, playerOne;
+@synthesize playerOneScore, playerTwoScore, playerOne, playerTwo;
 
 -(void) scorePlayerOnePoint:(id) sender
 {
-  int newValue = [playerOneScore.titleLabel.text intValue] + 1;
-  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", newValue];
   [playerOne score];
+  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerOne.currentScore];
 }
 
 -(void) scorePlayerTwoPoint:(id) sender
 {
-	int newValue = [playerTwoScore.titleLabel.text intValue] + 1;
-	playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", newValue];
+  [playerTwo score];
+  playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerTwo.currentScore];
 }
 
 /*

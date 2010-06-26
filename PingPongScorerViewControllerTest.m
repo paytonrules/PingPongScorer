@@ -50,7 +50,7 @@
   
   [controller scorePlayerOnePoint:nil];
 	
-  STAssertEqualStrings(controller.playerOneScore.titleLabel.text, @"10", nil);
+  STAssertEqualStrings(controller.playerOneScore.currentTitle, @"10", nil);
 }
 
 -(void) testScorePlayerTwoPointUpdatesPlayerTwoText
@@ -61,7 +61,7 @@
   
   [controller scorePlayerTwoPoint:nil];
 	
-	STAssertEqualStrings(controller.playerTwoScore.titleLabel.text, @"6", nil);
+	STAssertEqualStrings(controller.playerTwoScore.currentTitle, @"6", nil);
 }
 
 -(void) testPlayerOneIsReleasedWhenTheControllerIsReleased

@@ -19,4 +19,13 @@
   STAssertEquals(player.currentScore, 1, nil);
 }
 
+-(void) testScoringPlayerTwiceIncrementsTwice
+{
+  NSObject<Player> *player = [[[CurrentPlayer alloc] init] autorelease];
+  
+  [player score];
+  [player score];
+  
+  STAssertEquals(player.currentScore, 2, nil);
+}
 @end

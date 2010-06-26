@@ -5,8 +5,8 @@
 
 -(void) updateScreen
 {
-  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerOne.currentScore];
-  playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerTwo.currentScore];
+  [playerOneScore setTitle:[NSString stringWithFormat:@"%d", playerOne.currentScore] forState:UIControlStateNormal & UIControlStateHighlighted & UIControlStateSelected];
+  [playerTwoScore setTitle:[NSString stringWithFormat:@"%d", playerTwo.currentScore] forState:UIControlStateNormal & UIControlStateHighlighted & UIControlStateSelected];
 }
 
 -(void) scorePlayerOnePoint:(id) sender

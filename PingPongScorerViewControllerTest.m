@@ -3,11 +3,26 @@
 
 @implementation PingPongScorerViewControllerTest
 
+-(void) assertOwnedObjectisReleased: (NSObject *) object
+{
+  [object retain];  // Retain the object to guarantee we own it
+  NSUInteger expectedRetainCount =  [object retainCount] - 1;
+  
+  [controller release];
+  controller = nil;
+  
+  STAssertEquals([object retainCount], expectedRetainCount, nil);
+  
+  [object release];
+} 
+
 -(void) setUp
 {
 	controller = [[PingPongScorerViewController alloc] init];
   controller.playerOneScore = [[[UIButton alloc] init] autorelease];
   controller.playerTwoScore = [[[UIButton alloc] init] autorelease];
+  controller.playerOne = [[[MockPlayer alloc] init] autorelease];
+  controller.playerTwo = [[[MockPlayer alloc] init] autorelease];
 }
 
 -(void) tearDown
@@ -51,57 +66,21 @@
 
 -(void) testPlayerOneIsReleasedWhenTheControllerIsReleased
 {
-  NSUInteger expectedRetainCount = 1;
-  MockPlayer *player = [[MockPlayer alloc] init];
-  controller.playerOne = player;
-  
-  [controller release];
-  controller = nil;
-  
-  STAssertEquals([player retainCount], expectedRetainCount, nil);
-  
-  [player release];
+  [self assertOwnedObjectisReleased: controller.playerOne];
 }
 
 -(void) testPlayerTwoIsReleasedWhenTheControllerIsReleased
 {
-  NSUInteger expectedRetainCount = 1;
-  MockPlayer *player = [[MockPlayer alloc] init];
-  controller.playerTwo = player;
-  
-  [controller release];
-  controller = nil;
-  
-  STAssertEquals([player retainCount], expectedRetainCount, nil);
-  
-  [player release];
+  [self assertOwnedObjectisReleased: controller.playerTwo];
 }
 
 -(void) testUIButtonPlayerOneIsReleasedWhenTheControllerIsReleased
 {
-  NSUInteger expectedRetainCount = 1;
-  UIButton *player = [[UIButton alloc] init];
-  controller.playerOneScore = player;
-  
-  [controller release];
-  controller = nil;
-  
-  STAssertEquals([player retainCount], expectedRetainCount, nil);
-  
-  [player release];
-} 
+  [self assertOwnedObjectisReleased: controller.playerOneScore];
+}
 
 -(void) testUIButtonPlayerTwoIsReleasedWhenTheControllerIsReleased
 {
-  NSUInteger expectedRetainCount = 1;
-  UIButton *player = [[UIButton alloc] init];
-  controller.playerTwoScore = player;
-  
-  [controller release];
-  controller = nil;
-  
-  STAssertEquals([player retainCount], expectedRetainCount, nil);
-  
-  [player release];
+  [self assertOwnedObjectisReleased: controller.playerTwoScore];
 } 
 @end

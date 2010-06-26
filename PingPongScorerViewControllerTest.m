@@ -12,7 +12,9 @@
 
 -(void) tearDown
 {
-	[controller release];
+  if (controller != nil) {
+    [controller release];
+  }
 }
 
 -(void) testPlayerOneIsScored
@@ -45,6 +47,61 @@
   [controller scorePlayerTwoPoint:nil];
 	
 	STAssertEqualStrings(controller.playerTwoScore.titleLabel.text, @"6", nil);
-}  
+}
+
+-(void) testPlayerOneIsReleasedWhenTheControllerIsReleased
+{
+  NSUInteger expectedRetainCount = 1;
+  MockPlayer *player = [[MockPlayer alloc] init];
+  controller.playerOne = player;
   
+  [controller release];
+  controller = nil;
+  
+  STAssertEquals([player retainCount], expectedRetainCount, nil);
+  
+  [player release];
+}
+
+-(void) testPlayerTwoIsReleasedWhenTheControllerIsReleased
+{
+  NSUInteger expectedRetainCount = 1;
+  MockPlayer *player = [[MockPlayer alloc] init];
+  controller.playerTwo = player;
+  
+  [controller release];
+  controller = nil;
+  
+  STAssertEquals([player retainCount], expectedRetainCount, nil);
+  
+  [player release];
+}
+
+-(void) testUIButtonPlayerOneIsReleasedWhenTheControllerIsReleased
+{
+  NSUInteger expectedRetainCount = 1;
+  UIButton *player = [[UIButton alloc] init];
+  controller.playerOneScore = player;
+  
+  [controller release];
+  controller = nil;
+  
+  STAssertEquals([player retainCount], expectedRetainCount, nil);
+  
+  [player release];
+} 
+
+-(void) testUIButtonPlayerTwoIsReleasedWhenTheControllerIsReleased
+{
+  NSUInteger expectedRetainCount = 1;
+  UIButton *player = [[UIButton alloc] init];
+  controller.playerTwoScore = player;
+  
+  [controller release];
+  controller = nil;
+  
+  STAssertEquals([player retainCount], expectedRetainCount, nil);
+  
+  [player release];
+} 
 @end

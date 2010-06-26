@@ -71,6 +71,10 @@
 
 - (void)dealloc 
 {
+  [playerOne release];
+  [playerTwo release];
+  [playerOneScore release];
+  [playerTwoScore release];
 	[super dealloc];
 }
 

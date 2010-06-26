@@ -3,16 +3,22 @@
 @implementation PingPongScorerViewController
 @synthesize playerOneScore, playerTwoScore, playerOne, playerTwo;
 
+-(void) updateScreen
+{
+  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerOne.currentScore];
+  playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerTwo.currentScore];
+}
+
 -(void) scorePlayerOnePoint:(id) sender
 {
   [playerOne score];
-  playerOneScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerOne.currentScore];
+  [self updateScreen];
 }
 
 -(void) scorePlayerTwoPoint:(id) sender
 {
   [playerTwo score];
-  playerTwoScore.titleLabel.text = [NSString stringWithFormat:@"%d", playerTwo.currentScore];
+  [self updateScreen];
 }
 
 /*

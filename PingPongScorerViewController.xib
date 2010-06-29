@@ -125,7 +125,7 @@
 					<object class="IBUIButton" id="355276342">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{27, 104}, {114, 59}}</string>
+						<string key="NSFrame">{{26, 104}, {114, 59}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -141,7 +141,7 @@
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="643962654"/>
 					</object>
-					<object class="IBUIButton" id="416526796">
+					<object class="IBUIButton" id="626323921">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{186, 104}, {114, 59}}</string>
@@ -190,10 +190,10 @@
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUICustomObject" id="559296332">
+			<object class="IBUICustomObject" id="555128630">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUICustomObject" id="1006000383">
+			<object class="IBUICustomObject" id="50137923">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</object>
@@ -212,7 +212,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">playerOne</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="559296332"/>
+						<reference key="destination" ref="555128630"/>
 					</object>
 					<int key="connectionID">25</int>
 				</object>
@@ -220,7 +220,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">playerTwo</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1006000383"/>
+						<reference key="destination" ref="50137923"/>
 					</object>
 					<int key="connectionID">32</int>
 				</object>
@@ -236,7 +236,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">scorePlayerTwoPoint:</string>
-						<reference key="source" ref="416526796"/>
+						<reference key="source" ref="626323921"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -254,7 +254,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">playerTwoScore</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="416526796"/>
+						<reference key="destination" ref="626323921"/>
 					</object>
 					<int key="connectionID">36</int>
 				</object>
@@ -287,10 +287,10 @@
 							<reference ref="181261965"/>
 							<reference ref="159340102"/>
 							<reference ref="75729798"/>
-							<reference ref="355276342"/>
 							<reference ref="995059521"/>
 							<reference ref="677819262"/>
-							<reference ref="416526796"/>
+							<reference ref="626323921"/>
+							<reference ref="355276342"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -326,18 +326,18 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="416526796"/>
+						<reference key="object" ref="626323921"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
-						<reference key="object" ref="559296332"/>
+						<reference key="object" ref="555128630"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Player One</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">31</int>
-						<reference key="object" ref="1006000383"/>
+						<reference key="object" ref="50137923"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Player Two</string>
 					</object>

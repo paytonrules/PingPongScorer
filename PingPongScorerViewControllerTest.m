@@ -1,5 +1,6 @@
 #import "PingPongScorerViewControllerTest.h"
 #import "MockPlayer.h"
+#import "CurrentPlayer.h"
 
 @implementation PingPongScorerViewControllerTest
 
@@ -44,11 +45,11 @@
 
 -(void) testScorePlayerOnePointUpdatesPlayerOneText
 { 
-  MockPlayer *player = [[[MockPlayer alloc] init] autorelease];
-  [player setCurrentScore: 10];
+  CurrentPlayer *player = [[[CurrentPlayer alloc] init] autorelease];
   controller.playerOne = player;
   
-  [controller scorePlayerOnePoint:nil];
+  [controller viewDidLoad];
+  [player setValue:@"10" forKey:@"currentScore"];
 	
   STAssertEqualStrings(controller.playerOneScore.currentTitle, @"10", nil);
 }
@@ -82,5 +83,5 @@
 -(void) testUIButtonPlayerTwoIsReleasedWhenTheControllerIsReleased
 {
   [self assertOwnedObjectisReleased: controller.playerTwoScore];
-} 
+}
 @end

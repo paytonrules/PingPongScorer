@@ -12,7 +12,7 @@
 -(void) scorePlayerOnePoint:(id) sender
 {
   [playerOne score];
-  [self updateScreen];
+//  [self updateScreen];
 }
 
 -(void) scorePlayerTwoPoint:(id) sender
@@ -37,13 +37,23 @@
 }
 */
 
-
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void) viewDidLoad 
+{
+  [super viewDidLoad];
+  [playerOne addObserver:self
+              forKeyPath:@"currentScore"
+                 options:NSKeyValueObservingOptionOld
+                  context:nil];
 }
-*/
+
+-(void) observeValueForKeyPath:(NSString *) keyPath
+                      ofObject:(id) object
+                        change:(NSDictionary *) change
+                       context:(void *) context
+{
+  [self updateScreen];
+}
 
 
 /*

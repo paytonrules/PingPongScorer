@@ -45,7 +45,7 @@
 
 -(void) testScorePlayerOnePointUpdatesPlayerOneText
 { 
-  CurrentPlayer *player = [[[CurrentPlayer alloc] init] autorelease];
+  MockPlayer *player = [[[CurrentPlayer alloc] init] autorelease];
   controller.playerOne = player;
   
   [controller viewDidLoad];

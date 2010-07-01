@@ -168,7 +168,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				07DAA4CE1048188B00E97CF5 /* UnitTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07DAA4CE1048188B00E97CF5 /* UnitTests-Info.plist */,
 				2899E5210DE3E06400AC0155 /* PingPongScorerViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* PingPongScorer-Info.plist */,
@@ -356,7 +356,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = UnitTests;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -381,7 +381,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = UnitTests;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -397,6 +397,7 @@
 				GCC_PREFIX_HEADER = PingPongScorer_Prefix.pch;
 				INFOPLIST_FILE = "PingPongScorer-Info.plist";
 				PRODUCT_NAME = PingPongScorer;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -409,6 +410,7 @@
 				GCC_PREFIX_HEADER = PingPongScorer_Prefix.pch;
 				INFOPLIST_FILE = "PingPongScorer-Info.plist";
 				PRODUCT_NAME = PingPongScorer;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
 		};

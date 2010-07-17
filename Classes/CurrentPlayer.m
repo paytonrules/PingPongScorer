@@ -5,7 +5,7 @@
 
 -(void) score
 {
-  currentScore++;
+  self.currentScore = self.currentScore + 1;
 }
 
 @end

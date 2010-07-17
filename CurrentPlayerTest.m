@@ -28,4 +28,25 @@
   
   STAssertEquals(player.currentScore, 2, nil);
 }
+
+-(void) testScoreUpdatesTheObservers
+{
+  NSObject<Player> *player = [[[CurrentPlayer alloc] init] autorelease];
+  
+  [player addObserver:self forKeyPath:@"currentScore" options:NSKeyValueObservingOptionNew context:nil];
+  
+  observed = false;
+  [player score];
+  
+  STAssertTrue(observed, nil);
+}
+
+-(void) observeValueForKeyPath:(NSString *) keyPath
+                      ofObject:(id) object
+                        change:(NSDictionary *) change
+                       context:(void *) context
+{
+  observed = true;
+}
+  
 @end

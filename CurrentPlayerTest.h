@@ -2,6 +2,7 @@
 
 @interface CurrentPlayerTest : GTMTestCase
 {
+  bool observed;
 
 }
 @end

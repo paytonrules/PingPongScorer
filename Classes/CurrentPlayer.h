@@ -5,4 +5,6 @@
   int currentScore;
 }
 
+@property int currentScore;
+
 @end

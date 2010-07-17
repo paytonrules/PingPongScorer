@@ -17,7 +17,6 @@
 -(void) scorePlayerTwoPoint:(id) sender
 {
   [playerTwo score];
-  [self updateScreen];
 }
 
 -(void) viewDidLoad 
@@ -25,8 +24,12 @@
   [super viewDidLoad];
   [playerOne addObserver:self
               forKeyPath:@"currentScore"
-                 options:NSKeyValueObservingOptionOld
+                 options:NSKeyValueObservingOptionNew
                   context:nil];
+  [playerTwo addObserver:self
+              forKeyPath:@"currentScore"
+                 options:NSKeyValueObservingOptionNew
+                 context:nil];
 }
 
 

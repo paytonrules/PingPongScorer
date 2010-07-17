@@ -56,13 +56,13 @@
 
 -(void) testScorePlayerTwoPointUpdatesPlayerTwoText
 {
-  MockPlayer *player = [[[MockPlayer alloc] init] autorelease];
-  [player setCurrentScore: 6];
+  MockPlayer *player = [[[CurrentPlayer alloc] init] autorelease];
   controller.playerTwo = player;
   
-  [controller scorePlayerTwoPoint:nil];
+  [controller viewDidLoad];
+  [player setValue:@"10" forKey:@"currentScore"];
 	
-	STAssertEqualStrings(controller.playerTwoScore.currentTitle, @"6", nil);
+  STAssertEqualStrings(controller.playerTwoScore.currentTitle, @"10", nil);
 }
 
 -(void) testPlayerOneIsReleasedWhenTheControllerIsReleased

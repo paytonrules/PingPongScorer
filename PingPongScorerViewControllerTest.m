@@ -19,7 +19,7 @@
 
 -(void) setUp
 {
-	controller = [[PingPongScorerViewController alloc] init];
+  controller = [[PingPongScorerViewController alloc] init];
   controller.playerOneScore = [[[UIButton alloc] init] autorelease];
   controller.playerTwoScore = [[[UIButton alloc] init] autorelease];
   controller.playerOne = [[[MockPlayer alloc] init] autorelease];
